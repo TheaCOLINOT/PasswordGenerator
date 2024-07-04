@@ -9,3 +9,11 @@ div#passwords {
 button.btn {
     max-width: 150px;
 }
+
+input.form-control {
+    width: 250px;
+}
+
+p {
+    margin: 0;
+}

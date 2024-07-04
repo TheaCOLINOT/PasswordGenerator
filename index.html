@@ -15,7 +15,17 @@
         </header>
         <main>
             <div class="d-flex align-items-start flex-column justify-content-center">
-                <button class="w-50 btn btn-primary mx-auto my-5" onclick="generatePassword()">Generate</button>
+                <div class="w-100 mx-auto my-5 d-flex justify-content-center" id="inputs">
+                    <div class="form-floating mx-2">
+                        <input class="form-control" id="length" placeholder="length..." type="number" />
+                        <label for="length">Password length</label>
+                    </div>
+                    <div class="form-floating mx-2">
+                        <input class="form-control" id="number" placeholder="number of password" type="number" />
+                        <label for="number">Number of password generated</label>
+                    </div>
+                    <button class="w-25 btn btn-primary" onclick="generatePassword()">Generate</button>
+                </div>
                 <div class="container w-75 mx-auto my-2" id="passwords"></div>
             </div>
         </main>

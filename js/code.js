@@ -32,8 +32,22 @@ function generator(length, complexity) {
     return password;
 }
 
+function escapeHtml(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
 function generatePassword(){
     const PASSWORDS = document.getElementById('passwords');
-    PASSWORDS.innerHTML = generator(10, 4);
+    PASSWORDS.innerHTML = ""
+    const LENGTH = document.getElementById('length').value;
+    const NUMBER = document.getElementById('number').value;
+    for (let i = 0; i < NUMBER; i++) {
+        PASSWORDS.innerHTML += "<p>" + escapeHtml(generator(LENGTH, 4)) + "</p>"
+    }
 }
 
