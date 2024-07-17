@@ -1,0 +1,19 @@
+div#passwords {
+    min-height: 30vh;
+    /*width: 80vw;*/
+    padding: 20px;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+}
+
+button.btn {
+    max-width: 150px;
+}
+
+input.form-control {
+    width: 250px;
+}
+
+p {
+    margin: 0;
+}
